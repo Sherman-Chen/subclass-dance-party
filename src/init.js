@@ -1,7 +1,16 @@
 $(document).ready(function() {
   window.dancers = [];
+  var hidden = false;
   $('.removeDancersButton').on('click', function(event) {
-    $('body').children('.dancer').remove();
+    if (hidden === false){
+      $('body').children('.dancer').remove();
+      window.dancers = [];
+      hidden = true;
+    } else {
+
+      hidden = false;
+    }
+
   });
   $('.addDancerButton').on('click', function(event) {
     /* This function sets up the click handlers for the create-dancer
@@ -34,10 +43,11 @@ $(document).ready(function() {
     $('body').append(dancer.$node);
   });
   $('.lineup').on('click', function(event) {
+    window.dancers = window.dancers.sort(() => Math.random());
     var left = 100;
     var top = 0;
     for (var i = 0; i < window.dancers.length; i++) {
-      top = $('body').height() / window.dancers.length * i;
+      top = $('body').height() / window.dancers.length * i * .9;
       window.dancers[i].setPosition(top, left);
     }
   });
