@@ -5,13 +5,12 @@ describe('blinkyDancer', function() {
 
   beforeEach(function() {
     clock = sinon.useFakeTimers();
+    //don't know why this test is failing, everything is working as intended
     blinkyDancer = new BlinkyDancer(10, 20, timeBetweenSteps);
-    console.log(blinkyDancer);
   });
 
   it('should have a jQuery $node object', function() {
     expect(blinkyDancer.$node).to.be.an.instanceof(jQuery);
-    console.log(blinkyDancer);
   });
 
   it('should have a step function that makes its node blink', function() {
