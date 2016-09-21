@@ -38,6 +38,8 @@ var Dancer = function(top, left, timeBetweenSteps) {
   this.setPosition(top, left);
   this.top = top;
   this.left = left;
+  this.pair = undefined;
+  this.paired = false;
   // this.enable();
 };
 

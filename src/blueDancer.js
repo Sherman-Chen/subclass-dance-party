@@ -13,9 +13,12 @@ BlueDancer.prototype.step = function() {
 BlueDancer.prototype.setPosition = function(top, left) {
   var styleSettings = {
     content: 'url(\'http://1.bp.blogspot.com/-c0uAfcGI5Hc/UUyKduJDPfI/AAAAAAAABN8/RAaOkSbmGmw/s1600/tumblr_mg9y63XtrS1qh59n0o1_250.gif\')',
+    border: '3px solid blue'
+  };
+  var position = {
     top: top,
     left: left,
     border: '3px solid blue'
   };
-  this.$node.css(styleSettings);
+  this.$node.css(styleSettings).animate(position);
 };

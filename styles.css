@@ -1,3 +1,12 @@
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 body, html{
   height:100%;
 }
@@ -22,7 +31,7 @@ body, a:link, a:visited, a:active{
   background-color: #777;
 }
 .dancer{
-  border:10px solid red;
+  border:5px solid red;
   border-radius:10px;
   position:absolute;
 }
@@ -30,4 +39,36 @@ body, a:link, a:visited, a:active{
 .lineup{
   padding: 5px 20px; 
   float: left;
+}
+
+.police {
+  visibility: hidden;
+}
+
+.supportingDancer {
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.mainDancer {
+  animation: rotating 4s linear infinite;
+}
+
+.discoBall{
+  width: 150px;
+  margin: 0 auto;
+  padding: 3px;
+}
+
+.discoBall img {
+  height:150px;
+  width: 150px;
+  z-index: 1
+}
+
+.fog{
+  height: 1200px;
+  opacity: 0.5;
+  border: 0;
+  border-radius: 50px;
 }
