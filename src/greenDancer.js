@@ -21,5 +21,7 @@ GreenDancer.prototype.setPosition = function(top, left) {
     left: left,
     border: '0px'
   };
+  this.top = top;
+  this.left = left;
   this.$node.animate(position, 1500).css(styleSettings);
 };

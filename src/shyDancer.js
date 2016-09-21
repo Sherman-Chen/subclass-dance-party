@@ -26,5 +26,7 @@ ShyDancer.prototype.setPosition = function(top, left) {
     height: '150px',
     width: '150px',
   };
+  this.top = top;
+  this.left = left;
   this.$node.animate(position, 1000).css(styleSettings);
 };

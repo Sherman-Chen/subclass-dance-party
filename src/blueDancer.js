@@ -20,5 +20,7 @@ BlueDancer.prototype.setPosition = function(top, left) {
     left: left,
     border: '3px solid blue'
   };
+  this.top = top;
+  this.left = left;
   this.$node.css(styleSettings).animate(position);
 };

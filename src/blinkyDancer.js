@@ -40,6 +40,8 @@ BlinkyDancer.prototype.setPosition = function(top, left) {
     width: '200px',
     border: '3px solid blue'
   };
+  this.top = top;
+  this.left = left;
   this.$node.css(styleSettings).animate(position, 1000);
 };
 // http://www.bitcandy.com/sites/default/files/pictures/70s-dance.gif
